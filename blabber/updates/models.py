@@ -11,3 +11,8 @@ class Status(models.Model):
     posted_at = models.DateTimeField()
     user = models.ForeignKey(User)
     # this is how the relations are made within db
+
+
+class Favorite(models.Model):
+    user = models.ForeignKey(User)
+    status = models.ForeignKey(Status)
