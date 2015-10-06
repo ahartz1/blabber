@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 
 class Status(models.Model):
+    class Meta:
+        verbose_name_plural = 'statuses'
     # Note parentheses after; instances of classes
     # id is automatic
     text = models.CharField(max_length=141)
@@ -12,7 +14,16 @@ class Status(models.Model):
     user = models.ForeignKey(User)
     # this is how the relations are made within db
 
+    def favorite_count(self):
+        return self.favorite_set.count()
+
+    def __str__(self):
+        return '@{}: {}'.format(self.user, self.text)
+
 
 class Favorite(models.Model):
     user = models.ForeignKey(User)
     status = models.ForeignKey(Status)
+
+    def __str__(self):
+        return '{} <3 {}'.format(self.user, self.status)
