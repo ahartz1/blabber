@@ -79,6 +79,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'production' server info would go here
+    # wouldn't likely be SQLite3!
+    # more likely to be PostgreSQL
 }
 
 
