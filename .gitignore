@@ -3,3 +3,5 @@
 .direnv
 blabber/db.sqlite3
 blabber/blabber/__pycache__/
+blabber/updates/__pycache__/
+blabber/updates/migrations/__pycache__/
