@@ -1,3 +1,5 @@
 .DS_Store
 .envrc
 .direnv
+blabber/db.sqlite3
+blabber/blabber/__pycache__/
