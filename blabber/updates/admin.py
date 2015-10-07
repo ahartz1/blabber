@@ -3,6 +3,7 @@ from .models import Status, Favorite
 
 
 class StatusAdmin(admin.ModelAdmin):
+    '''List of fields that will show on admin page'''
     list_display = ['user', 'text', 'posted_at', 'favorite_count']
 
 
